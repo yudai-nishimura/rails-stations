@@ -14,6 +14,9 @@ module App
     # for rspec
     # Setting it to false will prevent unnecessary test files from being created.
     config.generators do |g|
+      g.skip_routes true
+      g.assets false
+      g.helper false
       g.test_framework false
     end
     # Configuration for the application, engines, and railties goes here.
@@ -21,7 +24,9 @@ module App
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #
+    config.i18n.default_locale = :ja
     # config.time_zone = "Central Time (US & Canada)"
+    config.time_zone = 'Tokyo'
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end
