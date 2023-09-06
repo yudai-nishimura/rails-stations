@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+17.times do |n|
+  Movie.create!(
+    name: Faker::JapaneseMedia::StudioGhibli.unique.movie,
+    image_url: 'https://picsum.photos/300/200',
+    is_showing: Faker::Boolean.boolean
+  )
+end
